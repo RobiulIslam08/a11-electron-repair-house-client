@@ -6,29 +6,33 @@ import { useContext, useEffect, useState } from "react";
 
 const Navbar = () => {
 	const { logout, user } = useContext(AuthContext)
-	const [theme, setTheme] =  useState(() => localStorage.getItem('theme') || 'light')
-    useEffect(()=>{
-        localStorage.setItem('theme', theme)
-        const localTheme = localStorage.getItem('theme')
-        document.querySelector('html').setAttribute('data-theme',localTheme)
-    },[theme])
-	const handleToggle = (e)=>{
-        if(e.target.checked){
-           setTheme('synthwave')
-         
-        }
-        else{
-            setTheme('light')
-        }
-    }
+	const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light')
+	useEffect(() => {
+		localStorage.setItem('theme', theme)
+		const localTheme = localStorage.getItem('theme')
+		document.querySelector('html').setAttribute('data-theme', localTheme)
+	}, [theme])
+	const handleToggle = (e) => {
+		if (e.target.checked) {
+			setTheme('synthwave')
+
+		}
+		else {
+			setTheme('light')
+		}
+	}
 	const links = <>
 		<div className="space-x-4">
+
 			<NavLink className={({ isActive }) =>
 				isActive ? "font-bold text-primary border-b-4 border-purple-500" : "font-semibold"
-			} to="/">Home</NavLink>
+			} to="/addService">Add Service</NavLink>
 			<NavLink className={({ isActive }) =>
 				isActive ? "font-bold text-primary border-b-4 border-purple-500" : "font-semibold"
-			} to="/allServices">All Services</NavLink>
+			} to="/manageService">Manage Service</NavLink>
+			<NavLink className={({ isActive }) =>
+				isActive ? "font-bold text-primary border-b-4 border-purple-500" : "font-semibold"
+			} to="/bookedService">Booked Service</NavLink>
 		</div>
 	</>
 
@@ -48,27 +52,34 @@ const Navbar = () => {
 		<div>
 			<div className="navbar bg-base-100 md:px-9 px-4">
 				<div className="navbar-start">
+					<img className="w-12 h-12 rounded-full" src="https://i.ibb.co/YcrXpxL/images.png" alt="" />
 
-					<p className="lg:text-3xl text-lg font-bold ">Electron Services</p>
+					<p className="lg:text-3xl text-lg font-bold lg:flex hidden">Electron Services</p>
 				</div>
 				<div className="navbar-center  lg:flex">
-					<ul className="menu menu-horizontal px-1">
-						{links}
-					</ul>
-					<div className="dropdown px-2">
-						<div tabIndex={0} role="button" className="font-semibold">
-							{/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> */}
-							dashboard
+					<ul className="menu menu-horizontal ">
+						<div className="space-x-2">
+						<NavLink className={({ isActive }) =>
+							isActive ? "font-bold text-primary border-b-4 border-purple-500" : "font-semibold"
+						} to="/">Home</NavLink>
+						<NavLink className={({ isActive }) =>
+							isActive ? "font-bold text-primary border-b-4 border-purple-500" : "font-semibold"
+						} to="/allservices">All Services</NavLink>
 						</div>
-						<ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-							{links}
-						</ul>
-					</div>
+					</ul>
+					{
+						user && <div className="dropdown px-2">
+							<div tabIndex={0} role="button" className="font-semibold">
+								
+								dashboard
+							</div>
+							<ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+								{links}
+							</ul>
+						</div>
+					}
 				</div>
-				{/* <div className="navbar-end">
-					<Link className='btn btn-sm'  to="/login">login</Link>
-					<button className='btn btn-sm' onClick={handleLogout}>log out</button>
-				</div> */}
+				
 				<div className="navbar-end">
 
 					{
