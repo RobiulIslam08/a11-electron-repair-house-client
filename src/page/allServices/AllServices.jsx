@@ -1,9 +1,11 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const AllServices = () => {
+	const lodedData = useLoaderData()
 	return (
 		<div>
-			all services
+			<h1>data length {lodedData.length}</h1>
 		</div>
 	);
 };
