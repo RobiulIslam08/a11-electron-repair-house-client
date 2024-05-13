@@ -1,14 +1,20 @@
-import { Link, useLoaderData } from "react-router-dom";
+import axios from 'axios';
+import  { useEffect, useState } from 'react';
 
-
-const AllServices = () => {
-  const services = useLoaderData()
-  // const {description, area, serviceName, serviceImg,price,providerImage,providerName} = services
-  console.log(services.description)
-  return (
-    <div>
-
-      {
+const PopularService = () => {
+	const [services, setService] = useState([]).slice(0,2)
+	useEffect(()=>{
+		axios((`${import.meta.env.VITE_API_URL}/allService`))
+		.then(res => {
+			const slicedServices = res.data.slice(0, 6);
+			setService(slicedServices);
+		})
+	},[setService])
+	return (
+		<div>
+			<h1>serivec {services.length}</h1>
+			<h1 className='text-3xl font-bold text-center'>Our Poupular Services</h1>
+			{
         services.map(service => <div key={service._id} className="mt-5 card card-side bg-base-100 shadow-xl">
           <img src={service.serviceImg} className="w-[35%]" alt="img" />
           <div className="card-body">
@@ -21,18 +27,18 @@ const AllServices = () => {
            </div>
             <h2 className="card-title">{service.serviceName}</h2>
             <p className="text-gray-500">{service.description}</p>
-            <div className="flex justify-between font-semibold">
-              <p>Area: {service.area}</p>
-              <p className="">Price: {service.price}$</p>
-            </div>
+  
+             
+              <p className="font-semibold">Price: {service.price}$</p>
+          
             <div className="card-actions justify-end">
-            <Link to={`/details/${service._id}`}>  <button className="btn w-full btn-primary">details</button></Link>
+              <button className="btn w-full btn-primary">details</button>
             </div>
           </div>
         </div>)
       }
-    </div>
-  );
+		</div>
+	);
 };
 
-export default AllServices;
+export default PopularService;

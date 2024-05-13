@@ -1,4 +1,5 @@
 import Slider from "../../component/slider/Slider";
+import PopularService from "./PopularService";
 
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
 		<div>
 			this is home
 			<Slider></Slider>
+			<PopularService></PopularService>
 		</div>
 	);
 };

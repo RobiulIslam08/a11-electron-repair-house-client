@@ -10,6 +10,7 @@ import LoginPage from "../page/loginPage/LoginPage";
 import AddService from "../page/addService/AddService";
 import ManageService from "../page/manageService/ManageService";
 import BookedService from "../page/bookedService/BookedService";
+import ServiceDetails from "../page/serviceDetails/ServiceDetails";
 
 const router = createBrowserRouter([
 	{
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
 			{
 				path: '/bookedService',
 				element: <BookedService></BookedService>
+			},
+			{
+				path: '/details/:_id',
+				element: <ServiceDetails></ServiceDetails>,
+				loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/allService/${params._id}`)
 			}
 		]
 	},

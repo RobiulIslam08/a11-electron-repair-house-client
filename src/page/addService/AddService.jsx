@@ -26,7 +26,7 @@ const AddService = () => {
 				if (res.data.insertedId) {
 					Swal.fire({
 						title: 'added successful!',
-						text: 'your added data successful',
+						text: 'your service successfuly added',
 						icon: 'success',
 						confirmButtonText: 'ok'
 					})
@@ -63,9 +63,9 @@ const AddService = () => {
 				<div>
 					<div className="form-control">
 						<label className="label">
-							<span className="label-text">Price</span>
+							<span className="label-text">Price(usd)</span>
 						</label>
-						<input type="text" placeholder="price" name="price" className="input input-bordered" required />
+						<input type="number" placeholder="price" name="price" className="input input-bordered" required />
 					</div>
 					<div className="form-control">
 						<label className="label">
