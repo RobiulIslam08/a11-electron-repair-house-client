@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const ServiceDetails = () => {
@@ -6,9 +6,29 @@ const ServiceDetails = () => {
 	
 	console.log(service)
 	return (
-		<div>
+		<div className="my-20">
 			yes details here
 			<p>sevice name {service.serviceName}</p>
+			<div className="card w-full border bg-base-100 shadow-xl">
+  <img src="https://i.ibb.co/7RwTRX7/pexels-it-services-eu-9278798-7639370.jpg" className="h-72" alt="Shoes" />
+  <div className="card-body">
+  <div className="flex gap-2 items-center">
+           <div className="w-10 rounded-full ">
+              <img alt="Tailwind CSS Navbar component" src={service.providerImage} />
+           
+            </div>
+            <p>{service.providerName}</p>
+           </div>
+    <h2 className="card-title">{service.serviceName}</h2>
+    <p className="text-gray-500">{service.description}</p>
+	<p>Location: {service.area}</p>
+	<p className="font-semibold">Price: {service.price}$</p>
+    <div className="card-actions justify-end">
+
+     <Link to={`/booked/${service._id}`}> <button className="btn btn-primary">Book Now</button></Link>
+    </div>
+  </div>
+</div>
 		</div>
 	);
 };

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import  { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const PopularService = () => {
 	const [services, setService] = useState([]).slice(0,2)
@@ -32,7 +33,7 @@ const PopularService = () => {
               <p className="font-semibold">Price: {service.price}$</p>
           
             <div className="card-actions justify-end">
-              <button className="btn w-full btn-primary">details</button>
+            <Link to={`/details/${service._id}`}>  <button className="btn w-full btn-primary">details</button></Link>
             </div>
           </div>
         </div>)

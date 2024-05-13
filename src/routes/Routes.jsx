@@ -11,6 +11,7 @@ import AddService from "../page/addService/AddService";
 import ManageService from "../page/manageService/ManageService";
 import BookedService from "../page/bookedService/BookedService";
 import ServiceDetails from "../page/serviceDetails/ServiceDetails";
+import BookNow from "../page/bookNow/BookNow";
 
 const router = createBrowserRouter([
 	{
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
 			{
 				path: '/details/:_id',
 				element: <ServiceDetails></ServiceDetails>,
+				loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/allService/${params._id}`)
+			},
+			{
+				path: '/booked/:_id',
+				element: <BookNow></BookNow>,
 				loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/allService/${params._id}`)
 			}
 		]
