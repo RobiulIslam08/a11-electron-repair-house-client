@@ -6,7 +6,7 @@ const BookNow = () => {
 	const service = useLoaderData()
 	const {user} = useAuth()
 	return (
-		<div className="my-20">
+		<div className="my-24">
 			book now
 			<p>service name : {service.serviceName}</p>
 			<form action="">

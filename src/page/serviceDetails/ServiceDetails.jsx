@@ -6,11 +6,11 @@ const ServiceDetails = () => {
 	
 	console.log(service)
 	return (
-		<div className="my-20">
+		<div className="my-24">
 			yes details here
 			<p>sevice name {service.serviceName}</p>
 			<div className="card w-full border bg-base-100 shadow-xl">
-  <img src="https://i.ibb.co/7RwTRX7/pexels-it-services-eu-9278798-7639370.jpg" className="h-72" alt="Shoes" />
+  <img src={service.serviceImg} className="h-72" alt="Shoes" />
   <div className="card-body">
   <div className="flex gap-2 items-center">
            <div className="w-10 rounded-full ">

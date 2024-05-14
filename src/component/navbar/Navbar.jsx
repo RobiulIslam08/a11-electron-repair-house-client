@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../providers/AuthProviders";
 import { useContext, useEffect, useState } from "react";
@@ -6,6 +6,7 @@ import { useContext, useEffect, useState } from "react";
 
 const Navbar = () => {
 	const { logout, user } = useContext(AuthContext)
+	const navigate = useNavigate()
 	const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light')
 	useEffect(() => {
 		localStorage.setItem('theme', theme)
@@ -41,6 +42,8 @@ const Navbar = () => {
 		logout()
 			.then(() => {
 				toast("Successful logout");
+				navigate('/')
+				
 			})
 			.catch(error => {
 				console.log('error khaiso logout ', error)
