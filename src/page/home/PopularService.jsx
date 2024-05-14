@@ -12,9 +12,9 @@ const PopularService = () => {
 		})
 	},[setService])
 	return (
-		<div>
-			<h1>serivec {services.length}</h1>
-			<h1 className='text-3xl font-bold text-center'>Our Poupular Services</h1>
+		<div className='my-24'>
+		
+			<h1 className='text-3xl font-bold text-center mb-20'>Our Poupular Services</h1>
 			{
         services.map(service => <div key={service._id} className="mt-5 card card-side bg-base-100 shadow-xl">
           <img src={service.serviceImg} className="w-[35%]" alt="img" />

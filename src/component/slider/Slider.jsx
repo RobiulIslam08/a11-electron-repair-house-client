@@ -41,14 +41,14 @@ const Slider = () => {
          
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent flex justify-center items-center md:h-[400px]  h-[200px] lg:h-[500px] text-white font-bold text-[22px] lg:text-3xl'> 
             <div className='flex justify-center items-center flex-col lg:gap-3 w-1/2'>
-                <p className='text-purple-500'>Chiang Mai </p>
+                <p className='text-purple-500'>Computer Servicing </p>
         <p className='text-center text-sm lg:text-base'> <h1  >
         Our{' '}
         <span style={{ color: '', fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
 
-            words={['Ancient temples, lush jungles, and vibrant markets enchant visitors.']}
+            words={['we excel in diagnosing and resolving a wide array of issues affecting desktops and laptops']}
             loop={false}
             cursor
             cursorStyle='_'
@@ -78,7 +78,7 @@ const Slider = () => {
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent  flex justify-center items-center md:h-[400px]  h-[200px] lg:h-[500px] text-white font-bold text-[22px] lg:text-3xl'>
             
               <div className='flex justify-center items-center flex-col lg:gap-3 w-1/2'>
-                <p className='text-purple-500'>  Bandarban </p>
+                <p className='text-purple-500'>  Mobile Servicing </p>
         <p className='text-center text-sm lg:text-base'>
         <h1  >
         {' '}
@@ -86,7 +86,7 @@ const Slider = () => {
           {/* Style will be inherited from the parent element */}
           <Typewriter
 
-            words={['Verdant hills, tribal culture, and serene landscapes embrace adventurers.']}
+            words={['phone repair entails expert diagnosis and resolution of issues plaguing mobile devices like smartphones and tablets.']}
             loop={false}
             cursor
             cursorStyle='_'
@@ -115,7 +115,7 @@ const Slider = () => {
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent  flex justify-center items-center md:h-[400px]  h-[200px] lg:h-[500px] text-white font-bold text-[22px] lg:text-3xl'>
               <div className='flex justify-center items-center flex-col lg:gap-3 w-1/2'>
-                <p className='text-purple-500'>Langkawi</p>
+                <p className='text-purple-500'>Monitor Servicing</p>
         <p className='text-center text-sm lg:text-base'>
         <h1  >
         {' '}
@@ -123,7 +123,7 @@ const Slider = () => {
           {/* Style will be inherited from the parent element */}
           <Typewriter
 
-            words={['Endless golden sands meet vibrant culture by the sea.']}
+            words={['I will inspect your monitor for any visible signs of damage or wear.']}
             loop={false}
             cursor
             cursorStyle='_'
@@ -152,15 +152,15 @@ const Slider = () => {
               loading="lazy"
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent  flex justify-center items-center md:h-[400px]  h-[200px] lg:h-[500px] text-white font-bold text-[22px] lg:text-3xl'><div className='flex justify-center items-center flex-col lg:gap-3 w-1/2'>
-                <p className='text-purple-500'>  Cox's Bajar </p>
+                <p className='text-purple-500'>  Laptop Serivicing</p>
         <p className='text-center text-sm lg:text-base'>
         <h1  >
-        Our{' '}
+        We{' '}
         <span style={{ color: '', fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
 
-            words={['Majestic beaches, bustling markets, and rich cultural heritage await.']}
+            words={[' we specialize in diagnosing and repairing various issues affecting laptops.']}
             loop={false}
             cursor
             cursorStyle='_'
