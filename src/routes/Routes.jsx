@@ -52,7 +52,8 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/bookedService',
-				element:<BookedServiceProtected> <BookedService></BookedService></BookedServiceProtected>
+				element:<BookedServiceProtected> <BookedService></BookedService></BookedServiceProtected>,
+				// loader : ()=> fetch(`${import.meta.env.VITE_API_URL}/purchaseService`)
 			},
 			{
 				path: '/details/:_id',
