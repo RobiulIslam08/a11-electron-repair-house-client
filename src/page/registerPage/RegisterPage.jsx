@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../providers/AuthProviders";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -43,6 +44,9 @@ const RegisterPage = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Register page</title>
+            </Helmet>
    
             <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-2xl font-bold text-center">Register Now </h1>
