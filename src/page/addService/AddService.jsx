@@ -1,6 +1,7 @@
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const AddService = () => {
@@ -37,6 +38,9 @@ const AddService = () => {
 	}
 	return (
 		<div className="my-24">
+			<Helmet>
+				<title>Add Service</title>
+			</Helmet>
 			<h1 className="text-3xl font-bold text-center">Added Your Service</h1>
 			<form onSubmit={handleSubmit} action="" className="w-[70%] mx-auto">
 

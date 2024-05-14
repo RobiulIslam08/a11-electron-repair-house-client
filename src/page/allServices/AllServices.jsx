@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -7,6 +8,9 @@ const AllServices = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>All Services</title>
+    </Helmet>
 
       {
         services.map(service => <div key={service._id} className="mt-5 card card-side bg-base-100 shadow-xl">

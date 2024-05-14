@@ -12,6 +12,12 @@ import ManageService from "../page/manageService/ManageService";
 import BookedService from "../page/bookedService/BookedService";
 import ServiceDetails from "../page/serviceDetails/ServiceDetails";
 import BookNow from "../page/bookNow/BookNow";
+import AddServiceProtected from "../privateRoute/AddServiceProtected";
+import ManageServiceProtected from "../privateRoute/ManageServiceProtected";
+import BookedServiceProtected from "../privateRoute/BookedServiceProtected";
+import DetailsProtected from "../privateRoute/DetailsProtected";
+import ServiceTodoProtected from "../privateRoute/ServiceTodoProtected";
+import ServiceTodo from "../page/serviceTodo/ServiceTodo";
 
 const router = createBrowserRouter([
 	{
@@ -37,25 +43,29 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/addService',
-				element: <AddService></AddService>
+				element: <AddServiceProtected><AddService></AddService></AddServiceProtected>
 			},
 			{
 				path: '/manageService',
-				element: <ManageService></ManageService>
+				element: <ManageServiceProtected><ManageService></ManageService></ManageServiceProtected>
 			},
 			{
 				path: '/bookedService',
-				element: <BookedService></BookedService>
+				element:<BookedServiceProtected> <BookedService></BookedService></BookedServiceProtected>
 			},
 			{
 				path: '/details/:_id',
-				element: <ServiceDetails></ServiceDetails>,
+				element: <DetailsProtected><ServiceDetails></ServiceDetails></DetailsProtected>,
 				loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/allService/${params._id}`)
 			},
 			{
 				path: '/booked/:_id',
 				element: <BookNow></BookNow>,
 				loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/allService/${params._id}`)
+			},
+			{
+				path:'/serviceTodo',
+				element: <ServiceTodoProtected><ServiceTodo></ServiceTodo></ServiceTodoProtected>
 			}
 		]
 	},

@@ -34,6 +34,9 @@ const Navbar = () => {
 			<NavLink className={({ isActive }) =>
 				isActive ? "font-bold text-primary border-b-4 border-purple-500" : "font-semibold"
 			} to="/bookedService">Booked Service</NavLink>
+			<NavLink className={({ isActive }) =>
+				isActive ? "font-bold text-primary border-b-4 border-purple-500" : "font-semibold"
+			} to="/serviceTodo">Service Todo</NavLink>
 		</div>
 	</>
 
