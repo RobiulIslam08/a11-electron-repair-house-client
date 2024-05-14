@@ -18,6 +18,7 @@ import BookedServiceProtected from "../privateRoute/BookedServiceProtected";
 import DetailsProtected from "../privateRoute/DetailsProtected";
 import ServiceTodoProtected from "../privateRoute/ServiceTodoProtected";
 import ServiceTodo from "../page/serviceTodo/ServiceTodo";
+import UpdatePage from "../page/updatePage/UpdatePage";
 
 const router = createBrowserRouter([
 	{
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
 			{
 				path:'/serviceTodo',
 				element: <ServiceTodoProtected><ServiceTodo></ServiceTodo></ServiceTodoProtected>
+			},
+			{
+				path: '/updatePage/:id',
+				element:<UpdatePage></UpdatePage>,
+				loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/allService/${params.id}`)
 			}
 		]
 	},

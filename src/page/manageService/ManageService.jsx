@@ -3,6 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const ManageService = () => {
@@ -80,7 +81,7 @@ useEffect(()=>{
 							<p>{service.description}</p>
 							<p className="font-bold">Price:{service.price}$</p>
 							<div className="card-actions flex justify-between">
-								<button className="btn btn-primary" >Update</button>
+								<Link to={`/updatePage/${service._id}`}><button className="btn btn-primary" >Update</button></Link>
 								<button className="btn btn-primary" onClick={()=> handleDelete(service._id)}>Delete</button>
 							</div>
 						</div>
