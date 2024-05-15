@@ -2,7 +2,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../providers/AuthProviders";
 import { useContext, useEffect, useState } from "react";
-
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const Navbar = () => {
 	const { logout, user } = useContext(AuthContext)
@@ -77,9 +77,11 @@ const Navbar = () => {
 						user && <div className="dropdown px-2">
 							<div tabIndex={0} role="button" className="font-semibold">
 								
-								dashboard
+							<div className="flex items-center gap-1">
+							<p>dashboard</p> <IoIosArrowDropdown />
 							</div>
-							<ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+							</div>
+							<ul tabIndex={0} className="menu  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-lg w-44">
 								{links}
 							</ul>
 						</div>

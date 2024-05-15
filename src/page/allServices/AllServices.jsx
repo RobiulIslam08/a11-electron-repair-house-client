@@ -19,12 +19,12 @@ const AllServices = () => {
           <div className="card-body">
             <div className="flex gap-2 items-center">
               <div className="w-10 rounded-full ">
-                <img alt="Tailwind CSS Navbar component" src={service.providerImage} />
+                <img alt="Tailwind CSS Navbar component" className="rounded-full" src={service.providerImage} />
 
               </div>
               <p>{service.providerName}</p>
             </div>
-            <h2 className="card-title">{service.serviceName}</h2>
+            <h2 className="card-title font-bold">{service.serviceName}</h2>
             <p className="text-gray-500">{service.description.slice(0,100)}...</p>
             <div className="flex justify-between font-semibold">
               <p>Area: {service.area}</p>

@@ -12,21 +12,21 @@ const PopularService = () => {
 		})
 	},[setService])
 	return (
-		<div className='my-24'>
+		<div className='my-32'>
 		
 			<h1 className='text-3xl font-bold text-center mb-20'>Our Poupular Services</h1>
 			{
-        services.map(service => <div key={service._id} className="mt-5 card card-side bg-base-100 shadow-xl">
+        services.map(service => <div key={service._id} className="mt-5 card  card-side bg-base-100 shadow-xl">
           <img src={service.serviceImg} className="w-[35%]" alt="img" />
           <div className="card-body">
            <div className="flex gap-2 items-center">
            <div className="w-10 rounded-full ">
-              <img alt="Tailwind CSS Navbar component" src={service.providerImage} />
+              <img alt="Tailwind CSS Navbar component" className='rounded-full' src={service.providerImage} />
            
             </div>
             <p>{service.providerName}</p>
            </div>
-            <h2 className="card-title">{service.serviceName}</h2>
+            <h2 className="card-title font-bold">{service.serviceName}</h2>
             <p className="text-gray-500">{service.description.slice(0,100)}...</p>
   
              

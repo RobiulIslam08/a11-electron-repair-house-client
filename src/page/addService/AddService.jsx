@@ -41,7 +41,7 @@ const AddService = () => {
 			<Helmet>
 				<title>Add Service</title>
 			</Helmet>
-			<h1 className="text-3xl font-bold text-center">Added Your Service</h1>
+			<h1 className="text-3xl font-bold text-center mb-20">Added Your Service</h1>
 			<form onSubmit={handleSubmit} action="" className="w-[70%] mx-auto">
 
 				<div>

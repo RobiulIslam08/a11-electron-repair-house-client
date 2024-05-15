@@ -54,7 +54,7 @@ const RegisterPage = () => {
       }
 
     return (
-        <div>
+        <div className="my-24">
             <Helmet>
                 <title>Register page</title>
             </Helmet>

@@ -60,7 +60,7 @@ const LoginPage = () => {
     //     })
     //   } 
     return (
-        <div>
+        <div className="my-24">
              <Helmet>
         <title>Login Page</title>
     </Helmet>

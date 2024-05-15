@@ -67,7 +67,7 @@ useEffect(()=>{
 			<p className="text-3xl font-bold text-center mb-28">Manage Your Service</p>
 			<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
 				{
-					services.map(service => <div key={service._id} className="card w-96 bg-base-100 shadow-xl">
+					services.map(service => <div key={service._id} className="card md:w-80 lg:w-72 xl:w-96 bg-base-100 shadow-xl">
 						<figure><img src={service.serviceImg} alt="Shoes" /></figure>
 						<div className="card-body">
 							<div className="flex gap-2 items-center">
@@ -77,7 +77,7 @@ useEffect(()=>{
 								</div>
 								<p>{service.providerName}</p>
 							</div>
-							<h2 className="card-title">{service.serviceName}</h2>
+							<h2 className="card-title font-bold">{service.serviceName}</h2>
 							<p>{service.description.slice(0,100)}...</p>
 							<p className="font-bold">Price:{service.price}$</p>
 							<div className="card-actions flex justify-between">
