@@ -7,10 +7,11 @@ const AllServices = () => {
 
 
   return (
-    <div>
+    <div className="my-24">
        <Helmet>
         <title>All Services</title>
     </Helmet>
+    <p className="text-3xl font-bold text-center mb-28">All Sercvices</p>
 
       {
         services.map(service => <div key={service._id} className="mt-5 card card-side bg-base-100 shadow-xl">
@@ -24,7 +25,7 @@ const AllServices = () => {
               <p>{service.providerName}</p>
             </div>
             <h2 className="card-title">{service.serviceName}</h2>
-            <p className="text-gray-500">{service.description}</p>
+            <p className="text-gray-500">{service.description.slice(0,100)}...</p>
             <div className="flex justify-between font-semibold">
               <p>Area: {service.area}</p>
               <p className="">Price: {service.price}$</p>

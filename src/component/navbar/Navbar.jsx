@@ -58,7 +58,7 @@ const Navbar = () => {
 		<div>
 			<div className="navbar bg-base-100 md:px-9 px-4">
 				<div className="navbar-start">
-					<img className="w-12 h-12 rounded-full" src="https://i.ibb.co/YcrXpxL/images.png" alt="" />
+					<Link to="/"><img className="w-12 h-12 rounded-full" src="https://i.ibb.co/YcrXpxL/images.png" alt="" /></Link>
 
 					<p className="lg:text-3xl text-lg font-bold lg:flex hidden">Electron Services</p>
 				</div>

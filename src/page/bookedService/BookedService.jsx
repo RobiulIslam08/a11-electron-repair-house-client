@@ -22,7 +22,9 @@ const BookedService = () => {
 				<title>Booked Service</title>
 			</Helmet>
 			<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
-				{
+				{bookedServices.length === 0 ? (
+          <p className="text-center text-xl font-semibold">No services booked yet.</p>
+        ) :
 					bookedServices.map(service => <div key={service._id} className="card w-96 bg-base-100 shadow-xl">
 						<figure><img src={service.serviceImg} alt="Shoes" /></figure>
 						<div className="card-body">

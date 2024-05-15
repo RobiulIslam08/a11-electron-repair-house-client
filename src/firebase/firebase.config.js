@@ -6,12 +6,18 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBwuKscuXUF8cfBNUy_lH2eqZ4oCQ92HXo",
-  authDomain: "electronic-repair-house.firebaseapp.com",
-  projectId: "electronic-repair-house",
-  storageBucket: "electronic-repair-house.appspot.com",
-  messagingSenderId: "268640803869",
-  appId: "1:268640803869:web:00669bab7b7e7c1a9efaf4"
+  // apiKey: "AIzaSyBwuKscuXUF8cfBNUy_lH2eqZ4oCQ92HXo",
+  // authDomain: "electronic-repair-house.firebaseapp.com",
+  // projectId: "electronic-repair-house",
+  // storageBucket: "electronic-repair-house.appspot.com",
+  // messagingSenderId: "268640803869",
+  // appId: "1:268640803869:web:00669bab7b7e7c1a9efaf4"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

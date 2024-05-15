@@ -27,7 +27,7 @@ const PopularService = () => {
             <p>{service.providerName}</p>
            </div>
             <h2 className="card-title">{service.serviceName}</h2>
-            <p className="text-gray-500">{service.description}</p>
+            <p className="text-gray-500">{service.description.slice(0,100)}...</p>
   
              
               <p className="font-semibold">Price: {service.price}$</p>
@@ -38,6 +38,9 @@ const PopularService = () => {
           </div>
         </div>)
       }
+     <div className='flex justify-center mt-7'>
+     <Link to="/allServices"><button className='btn btn-primary'>Show All</button></Link>
+     </div>
 		</div>
 	);
 };

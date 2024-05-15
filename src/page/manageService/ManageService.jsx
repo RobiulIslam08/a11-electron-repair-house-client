@@ -64,7 +64,7 @@ useEffect(()=>{
 			<Helmet>
 				<title>Manage Service</title>
 			</Helmet>
-			manage Service length{services.length}
+			<p className="text-3xl font-bold text-center mb-28">Manage Your Service</p>
 			<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
 				{
 					services.map(service => <div key={service._id} className="card w-96 bg-base-100 shadow-xl">
@@ -78,11 +78,11 @@ useEffect(()=>{
 								<p>{service.providerName}</p>
 							</div>
 							<h2 className="card-title">{service.serviceName}</h2>
-							<p>{service.description}</p>
+							<p>{service.description.slice(0,100)}...</p>
 							<p className="font-bold">Price:{service.price}$</p>
 							<div className="card-actions flex justify-between">
-								<Link to={`/updatePage/${service._id}`}><button className="btn btn-primary" >Update</button></Link>
-								<button className="btn btn-primary" onClick={()=> handleDelete(service._id)}>Delete</button>
+								<Link to={`/updatePage/${service._id}`}><button className="btn btn-sm btn-primary" >Update</button></Link>
+								<button className="btn btn-sm btn-primary" onClick={()=> handleDelete(service._id)}>Delete</button>
 							</div>
 						</div>
 					</div>)

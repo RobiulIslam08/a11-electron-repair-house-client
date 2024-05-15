@@ -19,11 +19,13 @@ import DetailsProtected from "../privateRoute/DetailsProtected";
 import ServiceTodoProtected from "../privateRoute/ServiceTodoProtected";
 import ServiceTodo from "../page/serviceTodo/ServiceTodo";
 import UpdatePage from "../page/updatePage/UpdatePage";
+import ErrorPage from "../page/errorPage/ErrorPage";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Mainlayout></Mainlayout>,
+		errorElement: <ErrorPage></ErrorPage>,
 		children: [
 			{
 				path: '/',
