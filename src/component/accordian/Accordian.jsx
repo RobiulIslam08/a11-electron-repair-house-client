@@ -3,9 +3,9 @@
 const Accordian = () => {
 	return (
 		<div className="mb-32">
-			<div className="text-center w-1/2 mx-auto mb-10">
+			<div className="text-center w-1/2 mx-auto mb-16">
 			<h2 className="text-2xl font-semibold sm:text-4xl">Frequently Asked Questions</h2>
-			<p className="mt-4 mb-8 dark:text-gray-600">Welcome to our Frequently Asked Questions section, where we provide answers to common inquiries about our electronic servicing. Whether you're curious about our repair process, warranty coverage, or pricing, we've got you covered.</p>
+			<p className="mt-4 mb-8 dark:text-gray-600">Welcome to our Frequently Asked Questions section, where we provide answers to common inquiries about our electronic servicing. </p>
 
 			</div>
 		
