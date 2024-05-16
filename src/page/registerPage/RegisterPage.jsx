@@ -32,7 +32,7 @@ const RegisterPage = () => {
             .then(()=>{
                 toast("Successful Register"); 
                 navigate("/")
-                console.log(result.user)
+            
             })
            
         })

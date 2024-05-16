@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const ServiceDetails = () => {
 	const service = useLoaderData()
 	
-	console.log(service)
+
 	return (
 		<div className="my-24">
 			yes details here

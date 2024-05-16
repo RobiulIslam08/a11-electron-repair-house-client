@@ -159,7 +159,7 @@ const BookNow = () => {
             serviceId: service._id
         };
         
-        console.log(serviceInfo);
+      
 
         axios.post(`${import.meta.env.VITE_API_URL}/purchaseService`, serviceInfo)
             .then(res => {

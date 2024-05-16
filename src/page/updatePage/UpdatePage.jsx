@@ -19,7 +19,7 @@ const UpdatePage = () => {
 		// axios.post(`import.meta.env.VITE_API_URL/allService`,serviceInfo)
 		axios.put(`${import.meta.env.VITE_API_URL}/updatePage/${service._id}`, serviceInfo)
 			.then(res => {
-				console.log(res.data)
+			
 				if (res.data.modifiedCount>0) {
 					Swal.fire({
 						title: 'update successful!',

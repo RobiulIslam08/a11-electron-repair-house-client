@@ -7,7 +7,7 @@ import axios from "axios";
 
 const BookedService = () => {
 	const [bookedServices, setBookedServices] = useState([])
-	console.log(bookedServices)
+
 	const {user} = useAuth()
 	useEffect(()=>{
 		axios.get(`${import.meta.env.VITE_API_URL}/purchaseService/${user?.email}`)

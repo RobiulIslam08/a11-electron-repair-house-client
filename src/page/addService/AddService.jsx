@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 const AddService = () => {
 	const { user } = useAuth()
 
-	console.log(user.email)
+	
 	const providerEmail = user.email
 	const providerName = user.displayName;
 	const providerImage = user.photoURL
