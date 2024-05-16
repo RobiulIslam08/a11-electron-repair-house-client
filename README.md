@@ -1,8 +1,15 @@
-# React + Vite
+# My website name  "Electron Services"
+### live link  
+`https://electronic-repair-house.web.app/`
+---
+### featured
+- navbar: The navbar will be present on all pages.  
+- add services page: This page has been created so that user data can be added dynamically.  
+- detail page: When the user clicks the View Details button it takes
+the user to the  Details page. This page will be a protected route
+and  the private route moves to the login page if the user is
+not logged in.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- login page: This page has been created for login
+- register page: This page to create a new account.
+## MY selected category name = assignment_category_0002

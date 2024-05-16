@@ -14,8 +14,8 @@ const Home = () => {
 			</Helmet>
 			<Slider></Slider>
 			<PopularService></PopularService>
-			<OurTeam></OurTeam>
 			<Accordian></Accordian>
+			<OurTeam></OurTeam>
 			<Contact></Contact>
 		</div>
 	);
