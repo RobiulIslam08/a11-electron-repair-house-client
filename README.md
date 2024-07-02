@@ -3,8 +3,8 @@
 `https://electronic-repair-house.web.app/`
 ---
 ### featured
-- navbar: The navbar will be present on all pages.  
-- add services page: This page has been created so that user data can be added dynamically.  
+-Responsive and Visually Appealing Design: The website is fully responsive and features an attractive layout with proper color contrast, alignment, and spacing.  
+- User Authentication and Management: Includes email/password and Google login, along with private routes for adding, updating, and deleting user-specific services.  
 - detail page: When the user clicks the View Details button it takes
 the user to the  Details page. This page will be a protected route
 and  the private route moves to the login page if the user is
