@@ -14,4 +14,28 @@ not logged in.
 
 - login page: This page has been created for login
 - register page: This page to create a new account.
+
+## I am use  this technoloy in this project:
+   - html
+   - tailwind css
+   - react js
+   - mongodb
+
+## Local Setup
+
+To run the project locally, follow these steps:
+
+### Prerequisites
+
+Ensure you have the following software installed on your system:
+
+- Node.js (https://nodejs.org/)
+- Git (https://git-scm.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/RobiulIslam08/a11-electron-repair-house-client
 ## MY selected category name = assignment_category_0002
